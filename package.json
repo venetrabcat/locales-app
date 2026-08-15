@@ -1,0 +1,10 @@
+{
+  "name": "locales-app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Справочник локалей: таблица кодов, языков, стран, валют и TLD",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
