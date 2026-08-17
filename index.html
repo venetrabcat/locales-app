@@ -10,28 +10,33 @@
 </head>
 <body>
   <header class="page-header">
-    <h1>Справочник локалей</h1>
-    <!-- Переключатель языка. Логика переключения подписей и названий — M5. -->
+    <h1 data-i18n="title">Справочник локалей</h1>
+    <!-- Переключатель языка (M5): data-lang определяет активный язык -->
     <div class="lang-switch" role="group" aria-label="Язык интерфейса">
-      <button type="button" class="lang-btn lang-btn--active">RU</button>
-      <button type="button" class="lang-btn">EN</button>
+      <button type="button" class="lang-btn lang-btn--active" data-lang="ru">RU</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
     </div>
   </header>
 
   <main>
     <input class="search" id="search" type="search" placeholder="Поиск по коду, стране или языку">
+    <!-- Блок ошибки сети (M5), скрыт по умолчанию -->
+    <div id="error" class="error-block" hidden>
+      <p id="error-message">Не удалось загрузить данные.</p>
+      <button type="button" id="retry-btn">Повторить</button>
+    </div>
     <!-- Строки наполняет app.js из /api/locales (M2) -->
     <table class="locales">
       <thead>
         <tr>
-          <th scope="col" class="th-flag">Флаг</th>
-          <th scope="col" data-key="code">Код</th>
-          <th scope="col" data-key="language">Язык</th>
-          <th scope="col" data-key="country">Страна</th>
-          <th scope="col" data-key="currency">Валюта</th>
-          <th scope="col" data-key="tld">TLD</th>
-          <th scope="col" data-key="capital">Столица</th>
-          <th scope="col" data-key="timezone">Таймзона</th>
+          <th scope="col" class="th-flag" data-i18n="flag">Флаг</th>
+          <th scope="col" data-key="code" data-i18n="code">Код</th>
+          <th scope="col" data-key="language" data-i18n="language">Язык</th>
+          <th scope="col" data-key="country" data-i18n="country">Страна</th>
+          <th scope="col" data-key="currency" data-i18n="currency">Валюта</th>
+          <th scope="col" data-key="tld" data-i18n="tld">TLD</th>
+          <th scope="col" data-key="capital" data-i18n="capital">Столица</th>
+          <th scope="col" data-key="timezone" data-i18n="timezone">Таймзона</th>
         </tr>
       </thead>
       <tbody></tbody>

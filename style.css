@@ -114,6 +114,34 @@ body {
   font-size: 11px;
 }
 
+/* Блок ошибки сети (M5) */
+.error-block {
+  margin-bottom: 12px;
+  padding: 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.error-block p {
+  margin: 0 0 12px;
+  color: var(--text);
+}
+
+.error-block button {
+  padding: 8px 16px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.error-block button:hover {
+  filter: brightness(1.1);
+}
+
 .locales tbody tr:last-child td {
   border-bottom: none;
 }
