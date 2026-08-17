@@ -15,6 +15,14 @@ function flagFor(locale) {
   return span;
 }
 
+// Пустое значение (undefined/null/'') → «—» (M3)
+function cellText(value) {
+  if (value === undefined || value === null || value === '') {
+    return '—';
+  }
+  return value;
+}
+
 function renderRows(list) {
   tableBody.innerHTML = '';
 
@@ -41,7 +49,7 @@ function renderRows(list) {
 
     for (const value of textCells) {
       const td = document.createElement('td');
-      td.textContent = value;
+      td.textContent = cellText(value);
       tr.appendChild(td);
     }
 
