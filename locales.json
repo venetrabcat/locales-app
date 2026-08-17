@@ -1,0 +1,167 @@
+[
+  {
+    "code": "en-US",
+    "languageCode": "en",
+    "countryCode": "US",
+    "language": { "ru": "Английский", "en": "English" },
+    "country": { "ru": "США", "en": "United States" },
+    "currency": "USD",
+    "tld": ".us",
+    "capital": "Washington, D.C.",
+    "timezones": ["UTC-05:00"]
+  },
+  {
+    "code": "en-GB",
+    "languageCode": "en",
+    "countryCode": "GB",
+    "language": { "ru": "Английский", "en": "English" },
+    "country": { "ru": "Великобритания", "en": "United Kingdom" },
+    "currency": "GBP",
+    "tld": ".uk",
+    "capital": "London",
+    "timezones": ["UTC+00:00"]
+  },
+  {
+    "code": "en-AU",
+    "languageCode": "en",
+    "countryCode": "AU",
+    "language": { "ru": "Английский", "en": "English" },
+    "country": { "ru": "Австралия", "en": "Australia" },
+    "currency": "AUD",
+    "tld": ".au",
+    "capital": "Canberra",
+    "timezones": ["UTC+10:00", "UTC+09:30", "UTC+08:00", "UTC+09:00", "UTC+10:30", "UTC+08:45", "UTC+11:00", "UTC+06:30"]
+  },
+  {
+    "code": "en-CA",
+    "languageCode": "en",
+    "countryCode": "CA",
+    "language": { "ru": "Английский", "en": "English" },
+    "country": { "ru": "Канада", "en": "Canada" },
+    "currency": "CAD",
+    "tld": ".ca",
+    "capital": "Ottawa",
+    "timezones": ["UTC-05:00"]
+  },
+  {
+    "code": "ru-RU",
+    "languageCode": "ru",
+    "countryCode": "RU",
+    "language": { "ru": "Русский", "en": "Russian" },
+    "country": { "ru": "Россия", "en": "Russia" },
+    "currency": "RUB",
+    "tld": ".ru",
+    "capital": "Moscow",
+    "timezones": ["UTC+03:00"]
+  },
+  {
+    "code": "fr-FR",
+    "languageCode": "fr",
+    "countryCode": "FR",
+    "language": { "ru": "Французский", "en": "French" },
+    "country": { "ru": "Франция", "en": "France" },
+    "currency": "EUR",
+    "tld": ".fr",
+    "capital": "Paris",
+    "timezones": ["UTC+01:00"]
+  },
+  {
+    "code": "de-DE",
+    "languageCode": "de",
+    "countryCode": "DE",
+    "language": { "ru": "Немецкий", "en": "German" },
+    "country": { "ru": "Германия", "en": "Germany" },
+    "currency": "EUR",
+    "tld": ".de",
+    "capital": "Berlin",
+    "timezones": ["UTC+01:00"]
+  },
+  {
+    "code": "es-ES",
+    "languageCode": "es",
+    "countryCode": "ES",
+    "language": { "ru": "Испанский", "en": "Spanish" },
+    "country": { "ru": "Испания", "en": "Spain" },
+    "currency": "EUR",
+    "tld": ".es",
+    "capital": "Madrid",
+    "timezones": ["UTC+01:00"]
+  },
+  {
+    "code": "it-IT",
+    "languageCode": "it",
+    "countryCode": "IT",
+    "language": { "ru": "Итальянский", "en": "Italian" },
+    "country": { "ru": "Италия", "en": "Italy" },
+    "currency": "EUR",
+    "tld": ".it",
+    "capital": "Rome",
+    "timezones": ["UTC+01:00"]
+  },
+  {
+    "code": "pt-BR",
+    "languageCode": "pt",
+    "countryCode": "BR",
+    "language": { "ru": "Португальский", "en": "Portuguese" },
+    "country": { "ru": "Бразилия", "en": "Brazil" },
+    "currency": "BRL",
+    "tld": ".br",
+    "capital": "Brasília",
+    "timezones": ["UTC-03:00"]
+  },
+  {
+    "code": "ja-JP",
+    "languageCode": "ja",
+    "countryCode": "JP",
+    "language": { "ru": "Японский", "en": "Japanese" },
+    "country": { "ru": "Япония", "en": "Japan" },
+    "currency": "JPY",
+    "tld": ".jp",
+    "capital": "Tokyo",
+    "timezones": ["UTC+09:00"]
+  },
+  {
+    "code": "zh-CN",
+    "languageCode": "zh",
+    "countryCode": "CN",
+    "language": { "ru": "Китайский", "en": "Chinese" },
+    "country": { "ru": "Китай", "en": "China" },
+    "currency": "CNY",
+    "tld": ".cn",
+    "capital": "Beijing",
+    "timezones": ["UTC+08:00"]
+  },
+  {
+    "code": "ko-KR",
+    "languageCode": "ko",
+    "countryCode": "KR",
+    "language": { "ru": "Корейский", "en": "Korean" },
+    "country": { "ru": "Республика Корея", "en": "South Korea" },
+    "currency": "KRW",
+    "tld": ".kr",
+    "capital": "Seoul",
+    "timezones": ["UTC+09:00"]
+  },
+  {
+    "code": "ar-SA",
+    "languageCode": "ar",
+    "countryCode": "SA",
+    "language": { "ru": "Арабский", "en": "Arabic" },
+    "country": { "ru": "Саудовская Аравия", "en": "Saudi Arabia" },
+    "currency": "SAR",
+    "tld": ".sa",
+    "capital": "Riyadh",
+    "timezones": ["UTC+03:00"]
+  },
+  {
+    "code": "nl-NL",
+    "languageCode": "nl",
+    "countryCode": "NL",
+    "language": { "ru": "Нидерландский", "en": "Dutch" },
+    "country": { "ru": "Нидерланды", "en": "Netherlands" },
+    "currency": "EUR",
+    "tld": ".nl",
+    "capital": "Amsterdam",
+    "timezones": ["UTC+01:00"]
+  }
+]

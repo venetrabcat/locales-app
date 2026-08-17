@@ -16,8 +16,18 @@ const MIME = {
   '.ico': 'image/x-icon',
 };
 
-// Временная JSON-заглушка для M1. Реальные данные из locales.json — на M2.
-const LOCALES_STUB = [];
+// Данные локалей. Файл перечитывается на каждый запрос, чтобы правки
+// данных применялись без перезапуска сервера.
+const LOCALES_FILE = join(ROOT, 'locales.json');
+
+async function readLocales() {
+  try {
+    const content = await readFile(LOCALES_FILE, 'utf-8');
+    return JSON.parse(content);
+  } catch {
+    return null;
+  }
+}
 
 async function serveStatic(req, res, pathname) {
   // Только простые GET-запросы к файлам
@@ -48,12 +58,18 @@ async function serveStatic(req, res, pathname) {
   }
 }
 
-const server = createServer((req, res) => {
+const server = createServer(async (req, res) => {
   const { pathname } = new URL(req.url, `http://${req.headers.host}`);
 
   if (pathname === '/api/locales') {
+    const locales = await readLocales();
+    if (locales === null) {
+      res.writeHead(500, { 'Content-Type': 'application/json; charset=utf-8' });
+      res.end(JSON.stringify({ error: 'Не удалось прочитать locales.json' }));
+      return;
+    }
     res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
-    res.end(JSON.stringify(LOCALES_STUB));
+    res.end(JSON.stringify(locales));
     return;
   }
 

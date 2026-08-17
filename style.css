@@ -1,10 +1,10 @@
 :root {
-  --bg: #f5f6f8;
-  --surface: #ffffff;
-  --border: #d8dce3;
-  --text: #1f2430;
-  --muted: #6b7280;
-  --accent: #2563eb;
+  --bg: #0f172a;
+  --card: #1e293b;
+  --line: #334155;
+  --text: #e2e8f0;
+  --accent: #6366f1;
+  --muted: #8b98b1;
 }
 
 * {
@@ -13,9 +13,10 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   background: var(--bg);
   color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  padding: 24px;
 }
 
 /* Шапка страницы */
@@ -24,9 +25,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 16px 24px;
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
 }
 
 .page-header h1 {
@@ -37,8 +36,8 @@ body {
 /* Переключатель языка */
 .lang-switch {
   display: inline-flex;
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -46,6 +45,7 @@ body {
   padding: 6px 14px;
   border: none;
   background: transparent;
+  color: var(--text);
   font-size: 0.875rem;
   cursor: pointer;
 }
@@ -55,39 +55,62 @@ body {
   color: #fff;
 }
 
-/* Таблица */
-main {
-  padding: 24px;
-}
-
-.locales-table {
+/* Поле поиска */
+.search {
   width: 100%;
-  border-collapse: collapse;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.locales-table th,
-.locales-table td {
+  margin-bottom: 12px;
   padding: 10px 14px;
-  text-align: left;
-  border-bottom: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--line);
+  font-size: 0.9rem;
 }
 
-.locales-table thead th {
-  background: #eef1f5;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+.search::placeholder {
   color: var(--muted);
 }
 
-.locales-table tbody tr:last-child td {
+.search:focus {
+  outline: 1px solid var(--accent);
+}
+
+/* Таблица */
+.locales {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.locales th,
+.locales td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+.locales th {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.locales tbody tr:last-child td {
   border-bottom: none;
 }
 
-.locales-table tbody tr:hover {
-  background: #f8fafc;
+.locales tbody tr:hover {
+  background: var(--card);
+}
+
+/* Флаг (flag-icons по ISO 3166, масштаб через font-size) */
+.flag {
+  font-size: 20px;
+  border-radius: 3px;
+}
+
+/* Код локали */
+.code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 700;
+  color: var(--accent);
 }

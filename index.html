@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Справочник локалей</title>
+  <!-- Флаги: flag-icons по CDN (fi fi-XX по ISO 3166) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,12 +19,13 @@
   </header>
 
   <main>
-    <!-- Временные строки-заглушки для M1. Реальные данные из /api/locales — M2. -->
-    <table class="locales-table">
+    <input class="search" id="search" type="search" placeholder="Поиск по коду, стране или языку">
+    <!-- Строки наполняет app.js из /api/locales (M2) -->
+    <table class="locales">
       <thead>
         <tr>
-          <th scope="col">Код</th>
           <th scope="col">Флаг</th>
+          <th scope="col">Код</th>
           <th scope="col">Язык</th>
           <th scope="col">Страна</th>
           <th scope="col">Валюта</th>
@@ -31,39 +34,10 @@
           <th scope="col">Таймзона</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>en-AU</td>
-          <td>🇦🇺</td>
-          <td>Английский</td>
-          <td>Австралия</td>
-          <td>AUD</td>
-          <td>.au</td>
-          <td>Канберра</td>
-          <td>UTC+10:00</td>
-        </tr>
-        <tr>
-          <td>ru-RU</td>
-          <td>🇷🇺</td>
-          <td>Русский</td>
-          <td>Россия</td>
-          <td>RUB</td>
-          <td>.ru</td>
-          <td>Москва</td>
-          <td>UTC+03:00</td>
-        </tr>
-        <tr>
-          <td>fr-FR</td>
-          <td>🇫🇷</td>
-          <td>Французский</td>
-          <td>Франция</td>
-          <td>EUR</td>
-          <td>.fr</td>
-          <td>Париж</td>
-          <td>UTC+01:00</td>
-        </tr>
-      </tbody>
+      <tbody></tbody>
     </table>
   </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
