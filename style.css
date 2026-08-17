@@ -94,6 +94,26 @@ body {
   font-weight: 600;
 }
 
+/* Сортируемые заголовки (M4): колонка флага не сортируется */
+.locales th[data-key] {
+  cursor: pointer;
+  user-select: none;
+}
+
+.locales th[data-key]:hover {
+  color: var(--text);
+}
+
+.locales .th-flag {
+  cursor: default;
+}
+
+/* Индикатор направления сортировки (M4) */
+.locales .sort-indicator {
+  color: var(--accent);
+  font-size: 11px;
+}
+
 .locales tbody tr:last-child td {
   border-bottom: none;
 }
