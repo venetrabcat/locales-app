@@ -163,5 +163,15 @@
     "tld": ".nl",
     "capital": "Amsterdam",
     "timezones": ["UTC+01:00"]
+  },
+  {
+    "code": "na-NR",
+    "languageCode": "na",
+    "countryCode": "NR",
+    "language": { "ru": "Науруанский", "en": "Nauruan" },
+    "country": { "ru": "Науру", "en": "Nauru" },
+    "currency": "AUD",
+    "tld": ".nr",
+    "timezones": ["UTC+12:00"]
   }
 ]
